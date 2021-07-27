@@ -30,10 +30,9 @@ public class CustomerController {
         if (theBindingResult.hasErrors()) {
             return "customer-form";
         }
-
-        //log the input data
-        System.out.println("theStudent: " + theCustomer.getFirstName() + " " + theCustomer.getLastName());
-        return "customer-confirmation";
+        else {
+            return "customer-confirmation";
+        }
     }
 
     @InitBinder
